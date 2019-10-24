@@ -21,6 +21,9 @@ def translate(phrase):
         phrase = re.sub('%s{2,3}'%ech_vwl, ech_vwl, phrase)
     return phrase
 
+def translate(phrase):
+    return re.sub(r'(\w)\1?.', r'\1', phrase)
+    
 if __name__ == '__main__':
     print("Example:")
     print(translate("aaabucidyeeefigihoiiijukulemonoooopyqorysotauuuviwuxayyyzu ziyyyxuwivouuutesiriqopaooonimelykijaiiihigefaeeedacybuaaa"))
