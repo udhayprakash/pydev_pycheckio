@@ -8,7 +8,7 @@ def second_index(text: str, symbol: str) -> [int, None]:
     """
         returns the second index of a symbol in a given text
     """
-    result = text.find(symbol, text.find(symbol))
+    result = text.find(symbol, text.find(symbol)+ 1)
     return result if result != -1 else None
 
 
