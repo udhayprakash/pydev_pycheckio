@@ -2,11 +2,15 @@
 """
 Purpose: https://py.checkio.org/mission/sendgrid-sendone/solve/
 """
+import os
 
 import sendgrid
 from sendgrid.helpers.mail import Mail
+from dotenv import load_dotenv
 
-API_KEY = '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'
+load_dotenv()
+
+API_KEY = os.environ['SENDGRID_API_KEY']
 SUBJECT = 'Welcome'
 BODY = 'Hi {}'
 
@@ -30,7 +34,7 @@ def send_email(email, name):
 
 if __name__ == '__main__':
     # These "asserts" using only for self-checking and not necessary for auto-testing
-    send_email('somebody@gmail.com', 'Some Body')
+    send_email('uday3prakash@gmail.com', 'Some Body')
     print('Done')
 
 # print(f'sg.version              :{sg.version}')
