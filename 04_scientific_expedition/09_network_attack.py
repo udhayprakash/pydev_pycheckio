@@ -24,12 +24,14 @@ all(0 < matrix[i][i] < 10 for i in range(1, len(matrix)))
 all(0 ≤ matrix[i][j] ≤ 1 for i in range(len(matrix)) for j in range(len(matrix)) if i != j)
 
 """
+
+
 def capture(matrix):
     return 0
 
 
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     assert capture([[0, 1, 0, 1, 0, 1],
                     [1, 8, 1, 0, 0, 0],
                     [0, 1, 2, 0, 0, 1],
@@ -45,4 +47,3 @@ if __name__ == '__main__':
     assert capture([[0, 1, 1],
                     [1, 9, 1],
                     [1, 1, 9]]) == 9, "Small"
-

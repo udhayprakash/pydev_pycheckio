@@ -35,7 +35,7 @@ def checkio(number):
         num_str += hundreds
 
     if 100 > number >= 20:
-        print(number,  (number // 100) - 1)
+        print(number, (number // 100) - 1)
         tens = OTHER_TENS[(number // 100) - 1]
         number %= 10
         num_str += ' ' + tens

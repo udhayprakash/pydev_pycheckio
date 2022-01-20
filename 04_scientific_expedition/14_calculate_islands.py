@@ -14,11 +14,12 @@ any(any(row) for row in land_map)
 """
 from typing import List
 
-def checkio(land_map: List[List[int]]) -> List[int]:
 
+def checkio(land_map: List[List[int]]) -> List[int]:
     return [1]
 
-#These "asserts" using only for self-checking and not necessary for auto-testing
+
+# These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     print("Example:")
     print(checkio([[0, 0, 0, 0, 0],

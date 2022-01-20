@@ -15,10 +15,13 @@ Each string contains no more than 10 words.
 All words separated by commas.
 All words consist of lowercase latin letters.
 """
+
+
 def checkio(first, second):
     return ""
 
-#These "asserts" using only for self-checking and not necessary for auto-testing
+
+# These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     assert checkio("hello,world", "hello,earth") == "hello", "Hello"
     assert checkio("one,two,three", "four,five,six") == "", "Too different"
