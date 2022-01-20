@@ -3,16 +3,18 @@
 Purpose: https://py.checkio.org/mission/time-converter-24h-to-12h/solve/
 """
 
+
 def time_converter(time):
     hours, minutes = map(int, time.split(':'))
     if hours == 0:
         return f'{12}:{minutes:02} a.m.'
     elif hours == 12:
-       return f'{hours}:{minutes:02} p.m.'
+        return f'{hours}:{minutes:02} p.m.'
     elif hours > 12:
         hours = hours - 12
         return f'{hours}:{minutes:02} p.m.'
     return f'{hours}:{minutes:02} a.m.'
+
 
 if __name__ == '__main__':
     # print("Example:")

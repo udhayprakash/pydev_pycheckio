@@ -3,19 +3,21 @@
 Purpose: https://py.checkio.org/mission/house-password/solve/
 """
 
+
 def checkio(data: str) -> bool:
-    import re   
+    import re
     print()
-    if (len(data) >= 10 
-        and re.search('[0-9]', data)
-        and re.search('[a-z]', data)
-        and re.search('[A-Z]', data)
-        ):
+    if (len(data) >= 10
+            and re.search('[0-9]', data)
+            and re.search('[a-z]', data)
+            and re.search('[A-Z]', data)
+    ):
         return True
     return False
 
+
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     assert checkio('A1213pokl') == False, "1st example"
     assert checkio('bAse730onE4') == True, "2nd example"
     assert checkio('asasasasasasasaas') == False, "3rd example"

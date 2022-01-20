@@ -5,6 +5,7 @@ Purpose: https://py.checkio.org/en/mission/x-o-referee/solve/
 """
 from typing import List
 
+
 def checkio(game_result: List[str]) -> str:
     # row-wise check
     for ech_row in game_result:
@@ -23,26 +24,27 @@ def checkio(game_result: List[str]) -> str:
     second_diagonal = set()
     for _index, ech_row in enumerate(game_result):
         first_diagonal.add(ech_row[_index])
-        second_diagonal.add(ech_row[len(ech_row) - _index -1])
+        second_diagonal.add(ech_row[len(ech_row) - _index - 1])
 
     first_diagonal_unique = ''.join(first_diagonal)
     if len(first_diagonal_unique) == 1 and first_diagonal_unique in ('O', 'X'):
-            return first_diagonal_unique
+        return first_diagonal_unique
 
     second_diagonal_unique = ''.join(second_diagonal)
     if len(second_diagonal_unique) == 1 and second_diagonal_unique in ('O', 'X'):
-            return second_diagonal_unique
-    
+        return second_diagonal_unique
+
     # draw
-    return 'D' 
+    return 'D'
+
 
 if __name__ == '__main__':
     # print("Example:")
-    print(checkio([ "O.X",
-                    "XX.",
-                    "XOO"]))
+    print(checkio(["O.X",
+                   "XX.",
+                   "XOO"]))
 
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     assert checkio([
         "OOO",
         "XOX",
