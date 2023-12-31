@@ -40,10 +40,11 @@ Precondition: 1 < base ≤ 1032
 
 
 def friendly_number(number, base=1000, decimals=0, suffix='',
-                    powers=['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y']):
+                    powers=None):
     """
     Format a number as friendly text, using common suffixes.
     """
+    powers = ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'] if powers is None else powers
     return str(number)
 
 
