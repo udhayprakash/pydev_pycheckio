@@ -9,8 +9,7 @@ def between_markers(text: str, begin: str, end: str) -> str:
         returns substring between two given markers
     """
     begin_index = text.find(begin)
-    end_index = text.find(end)
-    if end_index == -1:
+    if (end_index := text.find(end)) == -1:
         end_index = len(text)
     if begin_index > end_index:
         return ''
