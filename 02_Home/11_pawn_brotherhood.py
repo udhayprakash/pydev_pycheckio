@@ -24,8 +24,7 @@ def is_pawn_safe(_pawn, _pawns):
 def safe_pawns(pawns: set) -> int:
     count = 0
     for pawn in sorted(pawns, key=lambda x: x[0]):
-        is_safe = is_pawn_safe(pawn, pawns)
-        if is_safe:
+        if is_safe := is_pawn_safe(pawn, pawns):
             count += 1
     return count
 
